@@ -1,0 +1,200 @@
+<html>
+	<head>
+	<title>聯絡我們</title>
+	<meta charset="utf-8">
+	<script src="https://maps.googleapis.com/maps/api/js"></script>
+	
+	<link href="style/index.css" rel="stylesheet" type="text/css">
+	<link href="style/menu.css" rel="stylesheet" type="text/css">
+	<link href="style/contact.css" rel="stylesheet" type="text/css">
+	
+	<style>
+      #map {
+        width: 280px;
+        height: 300px;
+		background-color: #CCC;
+		float:right;
+		margin-right:60px;
+		margin-bottom:20px;
+      }
+	</style>
+	</head>
+	<body>
+		<div class="mainContainer">
+			<div class="headerDiv">
+				<div class="logo">
+					<img src="image/logo.jpg" />
+				</div>
+				<div class="companyNameDivZh">
+						澳門泓信工程有限公司
+				</div>
+				<div class="companyNameDivEn">
+						Macau Wang Shun engineering limited
+				</div>
+				
+				<div id="menu">
+				  <ul>
+					<li> <a href="index.html">首頁</a></li>
+					<li> <a href="construction.html">公司業務</a>
+					  <ul>
+						<li><a href="construction.html">土木工程</a></li>
+						<li><a href="electronic.html">機電工程</a></li>
+						<li><a href="inhouse.html">室內裝修及設計</a></li>
+						<li><a href="maintain.html">石材清潔及護理</a></li>
+						<li><a href="repair.html">維修及保養</a></li>
+					  </ul>
+					</li>
+					<li> <a href="customers.html">我們的客戶</a></li>
+					<li> <a href="aboutUs.html">關於我們</a>
+						<ul>
+							<li><a href="introduction.html">公司介紹</a></li>
+							<li><a href="concept.html">公司經營理念</a></li>
+						</ul>
+					</li>
+					<li> <a href="contact.html">聯絡我們</a></li>
+				  </ul>
+				</div>
+			</div>
+			<div class="contentDiv">
+				<div class="leftDiv">
+				</div>
+				<div class="rightDiv">
+				
+					<h4>聯絡我們</h4>
+					
+					<div style="float:left;margin-bottom:20px;">
+					
+						<table>
+							<tr>
+								<td style="width:0px"></td><td><img src="image/logo.png" style="width:123px;height:109px"/></td>
+							</tr>
+							<tr>
+								<td style="width:0px"></td><td><h4>泓信工程有限公司</h4></td>
+							</tr>
+							<tr>
+								<td>地址:</td><td>澳門宋玉生廣場獲多利中心17樓N座</td>
+							<tr/>
+							<tr>
+								<td>電話:</td><td>(853) 2875 7897</td>
+							<tr/>
+							<tr>
+								<td>傳真:</td><td>(853) 2857 5265</td>
+							<tr/>
+							<tr>
+								<td>電郵:</td><td><a href="mailto:wangshunmo@gmail.com">wangshunmo@gmail.com</a><br/><a href="mailto:wangshunmo@gmail.com">szetokinyu@gmail.com</a></td>
+							<tr/>
+						</table>
+					</div>
+						
+					<div id="map"></div>
+					
+					<div>
+						<table>
+							<tr>
+								<td style="width:0px"></td><td><img src="image/decoidea.png" style="width:241px;height:73px"/></td>
+							</tr>
+							<tr>
+								<td style="width:0px"></td><td><h4>New Decoidea Pte Ltd.(新加坡分公司)</h4></td>
+							</tr>
+							<tr>
+								<td>地址:</td><td>16 Kallang Place #06-07 Singapore 339156</td>
+							<tr/>
+							<tr>
+								<td>電話:</td><td>(65) 6733 9666</td>
+							<tr/>
+							<tr>
+								<td>電郵:</td><td><a href="mailto:new_decoideas@singnet.com.sg">new_decoideas@singnet.com.sg</a></td>
+							<tr/>
+						</table>
+					</div>
+					<div>
+						<table>
+							<tr>
+								<td style="width:0px"></td><td><img src="image/chiaki.gif" style="width:100px;height:100px;padding-top:30px"/></td>
+							</tr>
+							<tr>
+								<td style="width:0px"></td><td><h4>Chiaki Enterprises Pte Ltd | Tubmaster Refinishing Pte Lt</h4></td>
+							</tr>
+							<tr>
+								<td>地址:</td><td>Blk 20 Woodlands Link #03-39, Singapore 738733.</td>
+							<tr/>
+							<tr>
+								<td>電話:</td><td>(853) 2875 7897</td>
+							<tr/>
+							<tr>
+								<td>電郵:</td><td><a href="mailto:new_decoideas@singnet.com.sg">wangshunmo@gmail.com</a></td>
+							<tr/>
+						</table>
+					</div>
+							
+							<script>
+				
+								var contentString = '泓信工程有限公司<br/>'+
+													'澳門宋玉生廣場獲多利中心17樓N座<br/>'+
+													'電話: 2875 7897';
+
+
+								var myLatlng = new google.maps.LatLng(22.189446,113.549747);
+								
+								var mapOptions = {
+								zoom: 18,
+								center: myLatlng
+								}
+								var map = new google.maps.Map(document.getElementById("map"), mapOptions);
+
+								// Place a draggable marker on the map
+								var marker = new google.maps.Marker({
+									position: myLatlng,
+									map: map,
+									draggable:true,
+									title:"泓信工程有限公司"
+								});
+							
+								var infowindow = new google.maps.InfoWindow({
+									content: contentString
+								});
+								
+								marker.addListener('click', function() {
+									infowindow.open(map, marker);
+								});
+							  
+							</script>
+						
+				</div>
+			</div>
+			<div class="footerDiv">
+				<div class="footerContact">
+					<a href="contact.html">聯絡我們</a>
+				</div>
+				<div class="footerMap">
+					<a href="map.html">網站地圖</a>
+				</div>
+				<div class="footerCopy">
+					版權所有 澳門泓信工程有限公司
+				</div>
+				
+				<div class="rewardDes">
+					產品獎項
+				</div>
+				<div class="reward1">
+					<img src="image/footer/Bizsafe.png"/>
+				</div>
+				<div class="reward2">
+					<img src="image/footer/SE_2010_White.jpg"/>
+				</div>
+				<div class="reward3">
+					<img src="image/footer/Singapore Brands.jpg"/>
+				</div>
+				
+				<div class="footerFB">
+					<div class="FBDesc">
+						<a href="https://www.facebook.com/TubmasterRefinishing">Facebook專頁</a>
+					</div>
+					<div class="FBDiv">
+						<img onclick="window.location.href = 'https://www.facebook.com/TubmasterRefinishing'" src="image/facebook.png"/>
+					</div>
+				</div>
+			</div>
+		<div>
+	</body>
+</html>

@@ -1,0 +1,37 @@
+.mainContainer{
+	height:1283px;
+}
+
+.contentDiv{
+	height:1100px;
+}
+
+.leftList li{
+	
+	font-size:13px;
+	font-family:Arial, Helvetica, sans-serif;
+	
+	height:25px;
+	width: 160px;
+	list-style-type:none;
+	background:#F7FE2E;
+	text-align:center;
+	border: 1px #cccccc;
+	border-style:dashed;
+	margin-bottom:2px;
+	
+}
+
+.leftList a{
+	display:block;
+	line-height: 25px;
+	width: 160px;
+	color:#777;
+	text-decoration:none;
+}
+
+.leftList li:hover, .leftList li a:hover {
+	background:#00CC00;
+	color:white;
+}
+
