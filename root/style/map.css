@@ -1,0 +1,27 @@
+.mainContainer{
+	height:580px;
+}
+
+.contentDiv{
+	height:400px;
+}
+
+.rightDiv td{
+	text-align:left;
+	padding-left:15px;
+	padding-right:15px;
+	padding-bottom:10px;
+	padding-top:10px;
+}
+
+.rightDiv a{
+	text-decoration:none;
+	
+	font-size:13px;
+	font-weight:600;
+	color:#4880F7;
+}
+
+.rightDiv a:hover{
+	color:#999;
+}
